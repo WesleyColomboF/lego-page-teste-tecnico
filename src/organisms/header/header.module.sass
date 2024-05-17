@@ -1,0 +1,44 @@
+@import "styles/variables.sass"
+
+.header-container
+    width: max-content
+    height: 80px
+    display: flex
+    align-items: center
+    padding: 0 14px
+
+
+
+.wrapper
+    z-index: 2
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $shade-white
+    width: 100%
+    position: fixed
+
+.logo
+    width:48px
+    height:48px 
+    margin-right: 18px
+
+.categories
+    margin-right:48px
+
+.request
+    margin: 0 4px
+
+
+@media (max-width: 1000px)
+    .contact
+        display: none
+    .categories
+        margin-right: 0
+    .header-container
+        width: 100%
+        justify-content: space-between
+    .categories
+        img
+            width:32px
+            height: 27px

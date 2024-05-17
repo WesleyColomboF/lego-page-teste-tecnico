@@ -1,0 +1,55 @@
+.overlay
+    position: relative
+    z-index: 1
+.title
+    position: absolute
+    top: 70%
+    left: 10%
+    width: 100%
+    max-width: 76%
+    z-index: 2
+
+.button-group
+    position: absolute
+    top: 80%
+    right: 6%
+
+.white-box
+    display: none
+    height: 80px
+    width: 100%
+
+.wrapper
+    position: relative
+
+.scroll
+    display: flex
+    color: white
+    position: absolute
+    top: 94%
+    right: 1%
+    img
+        margin-left: 18px
+
+@media (max-width: 1628px)
+    .title
+        left: 5%
+        top: 60%
+    
+@media (max-width: 1428px)
+    .title
+        left: 5%
+        top: 50%
+    
+
+@media (max-width: 1000px)
+    .title
+        position: relative
+        top: intial
+        left: 0 
+        margin: 0 16px
+    .white-box
+        display: block
+    .button-group
+        top:64%
+    
