@@ -14,13 +14,13 @@ const Header: FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.headerContainer}>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", alignItems: "center" }}>
           <img className={styles.logo} src={logo} />
           <IconButton
             className={styles.categories}
             img={wizardComponent}
             onClick={toggleDrawer}
-            orientation="horizontal"
+            orientation="vertical"
           >
             Categories
           </IconButton>
@@ -30,7 +30,7 @@ const Header: FC = () => {
         <IconButton
           className={styles.contact}
           img={messageCircle}
-          orientation="horizontal"
+          orientation="vertical"
         >
           Contact us
         </IconButton>
@@ -38,11 +38,11 @@ const Header: FC = () => {
           <IconButton
             className={styles.request}
             img={shoppingBag}
-            orientation="horizontal"
+            orientation="vertical"
           >
             Request
           </IconButton>
-          <IconButton img={search} orientation="horizontal">
+          <IconButton img={search} orientation="vertical">
             Search
           </IconButton>
         </div>

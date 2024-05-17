@@ -2,6 +2,7 @@ import { FC, ReactNode } from "react";
 import styles from "./icon-button.module.sass";
 import Typography from "../typography/Typography";
 import { Tag } from "../../enums/tag";
+import AnimatedContainer from "../animated-container/AnimatedContainer";
 
 interface Props {
   img: string;
@@ -18,18 +19,21 @@ const IconButton: FC<Props> = ({
   orientation,
   className,
 }) => {
-  return (
+  const button = (
     <button
-      className={`${styles.button}  ${
-        styles[orientation || "vertical"]
-      } ${className}`}
+      className={`${styles.button}  ${styles[orientation || "vertical"]}`}
       onClick={onClick}
     >
       <img src={img} />
-      <Typography size="smaller" type={Tag.p}>
+      <Typography type={orientation === "horizontal" ? Tag.h4 : Tag.p}>
         {children}
       </Typography>
     </button>
+  );
+  return orientation === "horizontal" ? (
+    <AnimatedContainer>{button}</AnimatedContainer>
+  ) : (
+    <div className={className}>{button}</div>
   );
 };
 

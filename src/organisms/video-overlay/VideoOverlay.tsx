@@ -9,10 +9,10 @@ import chevronsDown from "assets/chevrons-down.png";
 const VideoOverlay: FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   return (
-    <div className={styles.wrapper}>
+    <div id="video" className={styles.wrapper}>
       <div className={styles.whiteBox}></div>
       <div className={styles.overlay}>
-        <Video ref={videoRef} />
+        <Video forwardRef={videoRef} />
         <ButtonGroup className={styles.buttonGroup} />
         <div className={styles.scroll}>
           <Typography size="large" type={Tag.p}>
